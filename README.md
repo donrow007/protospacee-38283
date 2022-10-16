@@ -19,6 +19,7 @@
 
 ## prototypes テーブル
 
+
 | Column             | Type      | Options             |
 | ------------------ | ------    | --------------------|
 | title              | string    | NOT NULL            |
