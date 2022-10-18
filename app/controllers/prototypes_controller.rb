@@ -20,7 +20,7 @@ class PrototypesController < ApplicationController
   private
   def prototype_params
     params.require(:prototype).permit(:name, :image, :text)
-  end
+  
 
 
   def move_to_index
