@@ -21,12 +21,32 @@ class PrototypesController < ApplicationController
     end
   end
 
+  def destroy
+    prototype = Prototype.find(params[:id])
+    if
+      redirect_to root_path 
+    end
+  end
+
+
+  def edit
+  end
+
+
+  def update
+    prototype = Prototype.find(params[:id])
+    if
+      redirect_to root_path 
+    else
+      render :edit 
+    end
+  end
+
 
   def show
   end
 
   
-
   private
   def prototype_params
     params.require(:prototype).permit(:title, :catch_copy, :concept, :image,).merge(user_id: current_user.id)
@@ -34,12 +54,12 @@ class PrototypesController < ApplicationController
 
   def set_prototype
     @prototype = Prototype.find(params[:id])
-   end
+  end
 
-    def move_to_index
-    unless user_signed_in?
+  def move_to_index
+   unless user_signed_in?
       redirect_to action: :index
-    end
+   end
   end
 
 end
