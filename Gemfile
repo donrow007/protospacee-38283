@@ -57,3 +57,7 @@ gem 'pry-rails'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'pry-byebug'
+
+group :production do
+  gem 'pg'
+end
